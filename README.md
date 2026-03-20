@@ -12,3 +12,19 @@ A FastAPI-based backend for trading using Groww APIs.
 ## ⚙️ Setup
 
 ### 1. Clone repo
+
+
+### 2. Install dependencies
+
+
+### 3. Create `.env`
+
+
+### 4. Run server
+
+
+---
+
+## 🧠 Notes
+- Tables auto-create on startup
+- Do NOT commit `.env`
