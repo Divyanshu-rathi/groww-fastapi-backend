@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WebSocket Test</title>
+</head>
+<body>
+  <h2>Groww Live Data</h2>
+  <pre id="log"></pre>
+
+  <script>
+    const log = document.getElementById("log");
+
+    const ws = new WebSocket("ws://localhost:8000/ws/live?user_id=1");
+
+    ws.onopen = () => {
+      log.innerHTML += "WS connected\n";
+    };
+
+    ws.onmessage = (event) => {
+      log.innerHTML += "LIVE DATA: " + event.data + "\n";
+    };
+
+    ws.onerror = (e) => {
+      log.innerHTML += "WS error\n";
+      console.error(e);
+    };
+
+    ws.onclose = () => {
+      log.innerHTML += "WS closed\n";
+    };
+  </script>
+</body>
+</html>
